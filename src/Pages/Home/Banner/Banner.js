@@ -8,9 +8,9 @@ const Banner = () => {
     return (
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
-                <img src={imageOne} className="w-full" />
+                <img src={imageOne} className="w-full  rounded-lg" />
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 left-24  top-1/4">
-                    <h2 className='text-5xl font-semibold text-white'>
+                    <h2 className='text-5xl font-serif font-semibold text-white'>
                         Make Your <br />
                         Every Moment <br />
                         Count
@@ -30,9 +30,9 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
-                <img src={imageTwo} className="w-full" />
+                <img src={imageTwo} className="w-full rounded-lg" />
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 left-24  top-1/4">
-                    <h2 className='text-5xl font-semibold text-white'>
+                    <h2 className='text-5xl font-serif font-semibold  text-white'>
                         Make Your <br />
                         Every Moment <br />
                         Count
@@ -52,9 +52,9 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full">
-                <img src={imageThree} className="w-full" />
+                <img src={imageThree} className="w-full  rounded-lg" />
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 left-24  top-1/4">
-                    <h2 className='text-5xl font-semibold text-white'>
+                    <h2 className='text-5xl font-semibold font-serif text-white'>
                         Make Your <br />
                         Every Moment <br />
                         Count
@@ -74,9 +74,9 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full">
-                <img src={imageFour} className="w-full" />
+                <img src={imageFour} className="w-full  rounded-lg" />
                 <div className="absolute flex justify-end transform -translate-y-1/2 left-5 left-24  top-1/4">
-                    <h2 className='text-5xl font-semibold text-white'>
+                    <h2 className='text-5xl font-semibold  font-serif text-white'>
                         Make Your <br />
                         Every Moment <br />
                         Count

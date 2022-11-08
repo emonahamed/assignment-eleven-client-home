@@ -5,7 +5,7 @@ const PersonalProfile = () => {
     return (
         <div className="hero min-h-screen bg-gray-200 ">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={myimage} className="max-w-sm rounded-lg shadow-2xl" />
+                <img src={myimage} className="max-w-sm  w-full  rounded-lg shadow-2xl object-contain" />
                 <div>
                     <h1 className="text-3xl font-semibold font-mono">Hello , so good to <br />
                         See You !

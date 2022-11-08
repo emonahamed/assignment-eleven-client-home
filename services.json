@@ -1,0 +1,56 @@
+[
+    {
+        "_id": "635a0c0b64a6d231228942ae",
+        "service_id": "04",
+        "title": "Weeding Photography",
+        "img": "https://i.ibb.co/MgxT0fG/alvin-mahmudov-9-Xfc-Bxf-uo-unsplash.jpg",
+        "price": "5000$",
+        "description": "Wedding photographers capture memories for brides and grooms, creating a photographic narrative of wedding ceremonies. They take action shots of pre-ceremony preparations, the marriage ceremony, and the reception. They also take posed shots of the bride, groom, wedding party, and family members.On the appointed day, the wedding photographer is expected to be one of the first to arrive and one of the last to leave. During the course of the ceremonies and reception, the role of the photographer will be to use their talents to create a complete suite of images for those in attendance. Whether it’s photographing the groom in nuptial preparations or the bride while walking down the aisle, these collected pictures will construct a narrative for the event.",
+        "facility": "will make a special video clip at free of cost"
+    },
+    {
+        "_id": "635a0c0b64a6d231228942af",
+        "service_id": "05",
+        "title": "Potrait Photography",
+        "img": "https://i.ibb.co/qpDzFNx/stefan-stefancik-QXev-Dflbl8-A-unsplash.jpg",
+        "price": "200$",
+        "description": "Portrait photography is about capturing the essence, personality,identity and attitude of a person utilizing backgrounds, lighting and posing.While this definition may sound simple, portrait photography can be one of the most challenging forms of photography to master. The goal is to capture a photo that appears both natural and prepared to allow the subjects personality to show through.As long as the portrait photographer can effectively capture the subjects character,the equipment he/she uses does not really matter. While it always helps to have equipment that is state of the art, it is really not needed.",
+        "facility": "you will start getting discount after you take 3 service"
+    },
+    {
+        "_id": "635b591a1dafe382a9da8c96",
+        "service_id": "01",
+        "title": "Lighting",
+        "img": "https://i.ibb.co/ccrVY9m/krists-luhaers-Yh-C216t-AYAg-unsplash.jpg",
+        "price": "100$",
+        "description": "Photographic lighting refers to how a light source, artificial or natural, illuminates the scene or subject that is photographed. Photographers can manipulate the positioning and the quality of a light source to create visual effects, potentially changing aspects of the photograph such as clarity, tone and saturation often to create an accurate rendition of the scene",
+        "facility": "Lighting equipments will be provided from me"
+    },
+    {
+        "_id": "635b5afc1dafe382a9da8c98",
+        "service_id": "02",
+        "title": "product photography",
+        "img": "https://i.ibb.co/vHW82YQ/eniko-kis-Ks-LPTs-Yaq-IQ-unsplash.jpg",
+        "price": "150$",
+        "description": "Product photography has advanced significantly over recent years. And as ecommerce continues to grow, your product images are increasingly important.Product photography is any image of a good for sale. Also known as commercial photography, these images are meant to entice shoppers to purchase the photographed products. They feature product details and features, supplemental to written copy and product descriptions. The idea is to give potential buyers a full impression of the product.",
+        "facility": "discount after taking pictures of 50 products"
+    },
+    {
+        "_id": "635b5b691dafe382a9da8c99",
+        "service_id": "03",
+        "title": "Image retouching",
+        "img": "https://i.ibb.co/myLdWrv/shayan-rti-5-Hx3-Kc8x-LIE-unsplash.jpg",
+        "price": "90$",
+        "description": "Photo retouching is the process of altering an image to prepare it for final presentation. Retouchers typically perform actions that are small localized adjustments to an image. Usually completed after globalized adjustments (such as color correction), retouching is the polishing of an image",
+        "facility": "your image will be more beautiful and high resolution"
+    },
+    {
+        "_id": "635b5ba51dafe382a9da8c9a",
+        "service_id": "60$",
+        "title": "Image editing",
+        "img": "https://i.ibb.co/Y03bj31/maxresdefault.jpg",
+        "price": "70$",
+        "description": "Image editing is done for removing unwanted elements such as dust specks and scratches, adjusting the geometry of the image like rotating and cropping, correcting for lens aberrations, sharpening or softening the image, making color changes or adding special effects to the image.",
+        "facility": "Delivery within one day"
+    }
+]
