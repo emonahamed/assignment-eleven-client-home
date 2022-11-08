@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ServiceCard from '../../Shared/ServiceCard/ServiceCard';
 
 const Services = () => {
 
@@ -16,7 +17,20 @@ const Services = () => {
 
     return (
         <div>
-            <p className='text-2xl font-bold'>Services{services.length}</p>
+            <div className='text-center mt-5'>
+                <p className='text-2xl font-semi-bold text-blue-600'>Services</p>
+                <p className='text-green-700 text-xl'>Take a Look at my services and give your opinion</p>
+            </div>
+            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5'>
+                {
+                    services.map(service => <ServiceCard
+                        key={service._id}
+                        service={service}
+                    ></ServiceCard>)
+                }
+
+            </div>
+
         </div>
     );
 };

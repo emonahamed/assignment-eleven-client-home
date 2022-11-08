@@ -11,7 +11,8 @@ const PersonalProfile = () => {
                         See You !
                     </h1>
                     <p className="py-6">
-                        I'm professional photographer and retoucher with 5+ years of photo editing experience. Professional basic editing and complex photo manipulation as well.
+                        I'm professional photographer and retoucher with 5+ years of photo editing experience. <br />
+                        Professional basic editing and complex photo manipulation as well.
                     </p>
                     <button className="btn btn-primary">Contct Me</button>
                 </div>
