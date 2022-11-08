@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import websitelogo from '../../../../public/assests/websitelogo.png'
+import image from '../../../assests/camera.png'
 
 const Header = () => {
     return (
@@ -24,7 +26,9 @@ const Header = () => {
                         <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">ProPhotoGrapher</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-xl">
+                    <img src={image} alt="" />
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
