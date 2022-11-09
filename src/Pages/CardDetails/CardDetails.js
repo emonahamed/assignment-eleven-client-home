@@ -10,10 +10,10 @@ const CardDetails = () => {
     const handleReview = event => {
         event.preventDefault();
         const form = event.target;
-        const name = form.name.value;
-        const email = form.email.value;
+        const name = user?.displayName;
+        const email = user?.email;
         const message = form.message.value;
-        const photoURL = form.photoURL.value;
+        const photoURL = user?.photoURL;
         console.log(name, email, message, photoURL, _id);
 
 
