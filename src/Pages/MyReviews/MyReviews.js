@@ -4,26 +4,50 @@ import ReviewCard from '../ReviewCard/ReviewCard';
 
 const MyReviews = () => {
 
-    const { user } = useContext(AuthContext);
-    const [reviews, setReviews] = useState({});
-
+    const { user, loading, setLoading } = useContext(AuthContext);
+    const [reviews, setReviews] = useState([]);
 
 
     useEffect(() => {
-
         fetch(`http://localhost:5000/reviews?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email])
 
-    console.log(reviews);
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/reviews/${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+
+                    const remaining = reviews.filter(review => review._id !== id);
+                    setReviews(remaining);
+                    alert('deleted successfull');
+                }
+            })
+
+    }
+
+
+
+
+
     return (
         <div>
 
-            <h2>you have {reviews.length}</h2>
 
-
-
+            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5'>
+                {
+                    reviews.map(review => <ReviewCard
+                        key={review._id}
+                        review={review}
+                        handleDelete={handleDelete}
+                    ></ReviewCard>)
+                }
+            </div>
 
 
 
