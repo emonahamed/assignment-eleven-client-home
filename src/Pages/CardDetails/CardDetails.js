@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const CardDetails = () => {
     const { title, img, price, description, facility } = useLoaderData();
+    const { user } = useContext(AuthContext)
+    console.log(user);
 
 
     return (
@@ -12,10 +15,18 @@ const CardDetails = () => {
                 <h2 className="card-title">{title}</h2>
                 <p>{description}</p>
                 <p className='text-xl text-blue-400'>{facility}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Listen</button>
-                </div>
+                <form>
+                    <input type="text" placeholder="Type here" defaultValue={user?.displayName} className="input input-ghost w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" defaultValue={user?.email} className="input input-ghost w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" defaultValue={user?.photoURL} className="input input-ghost w-full max-w-xs" />
+                    <input type="text" placeholder="Type here" className="input input-ghost w-full max-w-xs" />
+                    <button className="btn btn-primary mx-2">Add Review</button>
+
+                </form>
             </div>
+
+
+
         </div>
     );
 };

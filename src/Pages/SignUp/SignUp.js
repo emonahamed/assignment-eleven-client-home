@@ -1,29 +1,45 @@
+import { updateProfile } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, auth } = useContext(AuthContext);
 
 
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
+        const name = form.name.value;
         const password = form.password.value;
-        const imageurl = form.imageurl.value;
-        console.log(email, password, imageurl);
+        const photoURL = form.photoURL.value;
+        console.log(email, password, photoURL);
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                updateUserName(name, photoURL)
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
+
+
+    const updateUserName = (name, photoURL) => {
+        updateProfile(auth.currentUser, {
+            displayName: name,
+            photoURL: photoURL
+        })
+            .then(() => {
+                console.log('display name')
             })
             .catch(error => console.error(error))
 
-
     }
+
+
 
 
 
@@ -53,9 +69,9 @@ const SignUp = () => {
 
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Image Url</span>
+                                <span className="label-text">photoURL</span>
                             </label>
-                            <input type="url" name='imageurl' placeholder="image url" className="input input-bordered" required />
+                            <input type="url" name='photoURL' placeholder="photoURL" className="input input-bordered" required />
                         </div>
 
                         <div className="form-control">
