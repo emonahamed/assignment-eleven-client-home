@@ -13,7 +13,7 @@ const ServiceCard = ({ service }) => {
                 <p className='text-3xl'>{price}</p>
                 <p className='text-xl'>{description.slice(0, 200)}</p>
                 <div className="card-actions">
-                    <button className="btn btn-outline btn-info">Review</button>
+                    <button className="btn btn-outline btn-info">View Details</button>
                 </div>
             </div>
         </div>

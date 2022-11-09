@@ -1,6 +1,5 @@
 [
     {
-        "_id": "635a0c0b64a6d231228942ae",
         "service_id": "04",
         "title": "Weeding Photography",
         "img": "https://i.ibb.co/MgxT0fG/alvin-mahmudov-9-Xfc-Bxf-uo-unsplash.jpg",
@@ -9,7 +8,6 @@
         "facility": "will make a special video clip at free of cost"
     },
     {
-        "_id": "635a0c0b64a6d231228942af",
         "service_id": "05",
         "title": "Potrait Photography",
         "img": "https://i.ibb.co/qpDzFNx/stefan-stefancik-QXev-Dflbl8-A-unsplash.jpg",
@@ -18,7 +16,6 @@
         "facility": "you will start getting discount after you take 3 service"
     },
     {
-        "_id": "635b591a1dafe382a9da8c96",
         "service_id": "01",
         "title": "Lighting",
         "img": "https://i.ibb.co/ccrVY9m/krists-luhaers-Yh-C216t-AYAg-unsplash.jpg",
@@ -27,7 +24,6 @@
         "facility": "Lighting equipments will be provided from me"
     },
     {
-        "_id": "635b5afc1dafe382a9da8c98",
         "service_id": "02",
         "title": "product photography",
         "img": "https://i.ibb.co/vHW82YQ/eniko-kis-Ks-LPTs-Yaq-IQ-unsplash.jpg",
@@ -36,7 +32,6 @@
         "facility": "discount after taking pictures of 50 products"
     },
     {
-        "_id": "635b5b691dafe382a9da8c99",
         "service_id": "03",
         "title": "Image retouching",
         "img": "https://i.ibb.co/myLdWrv/shayan-rti-5-Hx3-Kc8x-LIE-unsplash.jpg",
@@ -45,7 +40,6 @@
         "facility": "your image will be more beautiful and high resolution"
     },
     {
-        "_id": "635b5ba51dafe382a9da8c9a",
         "service_id": "60$",
         "title": "Image editing",
         "img": "https://i.ibb.co/Y03bj31/maxresdefault.jpg",

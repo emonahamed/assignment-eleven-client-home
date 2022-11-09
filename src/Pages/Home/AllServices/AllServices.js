@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import ServiceCard from '../../Shared/ServiceCard/ServiceCard';
 
-const Services = () => {
-
+const AllServices = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/threeservices')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -19,8 +17,8 @@ const Services = () => {
     return (
         <div>
             <div className='text-center mt-5'>
-                <p className='text-2xl font-semi-bold text-blue-600'>Services</p>
-                <p className='text-green-700 text-xl'>Take a Look at my services and give your opinion</p>
+                <p className='text-2xl font-semi-bold text-blue-600'>All Services</p>
+
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5'>
                 {
@@ -31,12 +29,8 @@ const Services = () => {
                 }
 
             </div>
-            <div className='text-center'>
-                <Link to='/allservice'> <button className="btn btn-wide">See All services</button></Link>
-            </div>
-
         </div>
     );
 };
 
-export default Services;
+export default AllServices;
