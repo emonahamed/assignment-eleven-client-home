@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const CardDetails = () => {
@@ -62,15 +62,23 @@ const CardDetails = () => {
                 <h2 className="card-title">{title}</h2>
                 <p>{description}</p>
                 <p className='text-xl text-blue-400'>{facility}</p>
-                <form onSubmit={handleReview}>
-                    <input name="name" type="text" placeholder="Type here" defaultValue={user?.displayName} className="input input-ghost w-full max-w-xs" />
-                    <input name="email" type="text" placeholder="Type here" defaultValue={user?.email} className="input input-ghost w-full max-w-xs" />
-                    <input name="photoURL" type="text" placeholder="Type here" defaultValue={user?.photoURL} className="input input-ghost w-full max-w-xs" />
-                    {/* <input type="text" placeholder="Type here" className="input input-ghost w-full max-w-xs" /> */}
-                    <textarea name="message" className="textarea w-full textarea-bordered" placeholder="Review"></textarea> <br />
-                    <input className='btn btn-outline mx-2' type="submit" value="Add Review" />
+                {user?.email ?
+                    <>
+                        <form onSubmit={handleReview}>
+                            <input name="name" type="text" placeholder="Type here" defaultValue={user?.displayName} className="input input-ghost w-full max-w-xs" readOnly />
+                            <input name="email" type="text" placeholder="Type here" defaultValue={user?.email} className="input input-ghost w-full max-w-xs" readOnly />
+                            <input name="photoURL" type="text" placeholder="Type here" defaultValue={user?.photoURL} className="input input-ghost w-full max-w-xs" readOnly />
+                            {/* <input type="text" placeholder="Type here" className="input input-ghost w-full max-w-xs" /> */}
+                            <textarea name="message" className="textarea w-full textarea-bordered" placeholder="Review"></textarea> <br />
+                            <input className='btn btn-outline mx-2' type="submit" value="Add Review" />
 
-                </form>
+                        </form>
+                    </>
+                    :
+                    <p>please <Link className='text-red-500' to='/login'>login</Link>  in to add a review</p>
+
+
+                }
             </div>
 
 
@@ -80,3 +88,19 @@ const CardDetails = () => {
 };
 
 export default CardDetails;
+
+
+
+
+//     user?.email ?
+//         <>
+//             < li className='font-semibold'> <Link to='/myreviews'>My Reviews</Link> </li>
+
+//             < li className='font-semibold'>
+//                 <button onClick={handleLogOut} className='btn-ghost'>Sign Out</button>
+//             </li>
+//         </>
+//         :
+//         < li className='font-semibold'> <Link to='/login'>Login</Link> </li>
+
+// 
