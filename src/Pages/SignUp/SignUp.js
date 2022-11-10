@@ -1,11 +1,15 @@
 import { updateProfile } from 'firebase/auth';
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
 
     const { createUser, auth } = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/';
 
 
     const handleSignUp = event => {
@@ -22,6 +26,7 @@ const SignUp = () => {
                 const user = result.user;
                 updateUserName(name, photoURL)
                 console.log(user);
+                navigate(from, { replace: true })
             })
             .catch(error => console.error(error))
     }
@@ -85,10 +90,10 @@ const SignUp = () => {
                         </div>
 
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Login" />
+                            <input className="btn btn-primary" type="submit" value="Sign UP" />
                         </div>
                     </form>
-                    <p className='mx-auto my-3'>Already have an account<Link className='text-orange-600 font-bold' to='/login'>Sign UP</Link>  </p>
+                    <p className='mx-auto my-3'>Already have an account<Link className='text-orange-600 font-bold' to='/login'>Log in</Link>  </p>
                 </div>
             </div>
         </div >
