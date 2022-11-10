@@ -1,11 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import EveryReview from '../EveryReview/EveryReview';
 
 const CardDetails = () => {
     const { _id, title, img, price, description, facility } = useLoaderData();
-    const { user } = useContext(AuthContext)
-    console.log(user, _id);
+    const { user } = useContext(AuthContext);
+
+    const [review, setReview] = useState([]);
+
+
+
+
+
+
 
     const handleReview = event => {
         event.preventDefault();
@@ -47,6 +55,13 @@ const CardDetails = () => {
     }
 
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/review/${_id}`)
+            .then((res) => res.json())
+            .then((data) => setReview(data));
+    }, [review, _id]);
+
+
 
 
 
@@ -57,8 +72,9 @@ const CardDetails = () => {
 
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl p-5">
-            <figure><img src={img} alt="Album" /></figure>
+
             <div className="card-body">
+                <figure><img className='w-96' src={img} alt="Album" /></figure>
                 <h2 className="card-title">{title}</h2>
                 <p>{description}</p>
                 <p className='text-xl text-blue-400'>{facility}</p>
@@ -76,9 +92,17 @@ const CardDetails = () => {
                     </>
                     :
                     <p>please <Link className='text-red-500' to='/login'>login</Link>  in to add a review</p>
-
-
                 }
+                <div>
+                    <p className='text-xl font-semi-bold text-yellow-600 m-1'><u>Peoples Review of this service</u></p>
+
+                    {
+                        review.map(everyReview => <EveryReview
+                            key={everyReview._id}
+                            everyReview={everyReview}
+                        ></EveryReview>)
+                    }
+                </div>
             </div>
 
 
