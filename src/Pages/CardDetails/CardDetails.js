@@ -42,7 +42,7 @@ const CardDetails = () => {
 
                 }
             })
-            .catch(err => console.err(err));
+            .catch(err => console.error(err));
 
     }
 

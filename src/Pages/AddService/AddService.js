@@ -20,24 +20,26 @@ const AddService = () => {
             facility: facility,
         }
 
-        //     fetch('http://localhost:5000/reviews', {
-        //         method: 'POST',
-        //         headers: {
-        //             'content-type': 'application/json'
-        //         },
-        //         body: JSON.stringify(addService)
-        //     })
-        //         .then(res => res.json())
-        //         .then(data => {
-        //             if (data.acknowledged) {
-        //                 alert('review done')
-        //                 form.reset();
 
-        //             }
-        //         })
-        //         .catch(err => console.err(err));
+        fetch('http://localhost:5000/services', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addService)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged) {
+                    alert('service added')
+                    form.reset();
 
-        // }
+                }
+            })
+            .catch(err => console.error(err));
+
+
+
 
 
 
