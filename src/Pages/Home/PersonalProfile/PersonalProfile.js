@@ -14,7 +14,7 @@ const PersonalProfile = () => {
                         I'm professional photographer and retoucher with 5+ years of photo editing experience. <br />
                         Professional basic editing and complex photo manipulation as well.
                     </p>
-                    <button className="btn btn-primary">Contct Me</button>
+                    <button className="btn btn-primary">Contact Me</button>
                 </div>
             </div>
         </div>

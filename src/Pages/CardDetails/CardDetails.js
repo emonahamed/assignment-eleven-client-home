@@ -2,8 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import EveryReview from '../EveryReview/EveryReview';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../hooks/useTitle';
 
 const CardDetails = () => {
+
+
+    useTitle('cardDetails');
     const { _id, title, img, price, description, facility } = useLoaderData();
     const { user } = useContext(AuthContext);
 
@@ -45,7 +51,7 @@ const CardDetails = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    alert('review done')
+                    toast('review done')
                     form.reset();
 
                 }
@@ -104,6 +110,7 @@ const CardDetails = () => {
                     }
                 </div>
             </div>
+            <ToastContainer />
 
 
 

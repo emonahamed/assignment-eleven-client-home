@@ -1,6 +1,11 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../hooks/useTitle';
 
 const AddService = () => {
+
+    useTitle('addservice');
 
     const handleAddService = event => {
         event.preventDefault();
@@ -31,18 +36,12 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    alert('service added')
+                    toast('service added')
                     form.reset();
 
                 }
             })
             .catch(err => console.error(err));
-
-
-
-
-
-
 
 
     }
@@ -92,6 +91,7 @@ const AddService = () => {
                 </div>
 
             </form>
+            <ToastContainer />
 
         </div>
     );

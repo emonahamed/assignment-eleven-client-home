@@ -1,11 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewCard from '../ReviewCard/ReviewCard';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../hooks/useTitle';
 
 const MyReviews = () => {
 
     const { user, loading, setLoading } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
+
+    useTitle('myreviews');
 
 
     useEffect(() => {
@@ -26,17 +31,13 @@ const MyReviews = () => {
                     const remaining = reviews.filter(review => review._id !== id);
                     setReviews(remaining);
                     // alert('deleted successfull');
-                    <div className="toast toast-top toast-start">
-                        <div className="alert alert-success">
-                            <div>
-                                <span>Message sent successfully.</span>
-                            </div>
-                        </div>
-                    </div>
+                    toast('deleted successfull');
                 }
             })
 
     }
+
+    console.log(reviews)
 
 
 
@@ -45,7 +46,7 @@ const MyReviews = () => {
     return (
         <div>
 
-
+            {/* 
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5'>
                 {
                     reviews.map(review => <ReviewCard
@@ -54,13 +55,14 @@ const MyReviews = () => {
                         handleDelete={handleDelete}
                     ></ReviewCard>)
                 }
-            </div>
+            </div> */}
+            <ToastContainer />
 
 
-            {/* {
-                reviews ?
+            {
+                reviews.length > 0 ?
+
                     <>
-
                         <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5'>
                             {
                                 reviews?.map(review => <ReviewCard
@@ -68,16 +70,18 @@ const MyReviews = () => {
                                     review={review}
                                     handleDelete={handleDelete}
                                 ></ReviewCard>)
+
                             }
                         </div>
                     </>
                     :
                     <>
                         <div>
-                            <p>ok</p>
+                            <p className='text-2xl text-center p-5 text-red-500'>No reviews added</p>
                         </div>
                     </>
-            } */}
+
+            }
 
 
 
