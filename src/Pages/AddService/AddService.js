@@ -10,7 +10,39 @@ const AddService = () => {
         const price = form.price.value;
         const description = form.description.value;
         const facility = form.facility.value;
-        console.log(title, img, price, description, facility)
+
+
+        const addService = {
+            title: title,
+            img: img,
+            price: price,
+            description: description,
+            facility: facility,
+        }
+
+        //     fetch('http://localhost:5000/reviews', {
+        //         method: 'POST',
+        //         headers: {
+        //             'content-type': 'application/json'
+        //         },
+        //         body: JSON.stringify(addService)
+        //     })
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             if (data.acknowledged) {
+        //                 alert('review done')
+        //                 form.reset();
+
+        //             }
+        //         })
+        //         .catch(err => console.err(err));
+
+        // }
+
+
+
+
+
     }
 
 
