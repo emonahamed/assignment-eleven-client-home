@@ -5,7 +5,7 @@ const ReviewCard = ({ review, handleDelete }) => {
     const [reviewService, setReviewService] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${service}`)
+        fetch(`https://assignment-eleven-server-ten.vercel.app/services/${service}`)
             .then(res => res.json())
             .then(data => setReviewService(data));
     }, [service])
@@ -18,7 +18,9 @@ const ReviewCard = ({ review, handleDelete }) => {
                 <h2 className="card-title">{serviceName}</h2>
                 <p className='text-blue-400'>Review : {message}</p>
                 <div className="card-actions justify-end">
+                    <button className="btn btn-outline-ghost">Update</button>
                     <button onClick={() => handleDelete(_id)} className="btn btn-outline-ghost">Delete</button>
+
                 </div>
             </div>
         </div>

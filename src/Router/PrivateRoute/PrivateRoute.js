@@ -7,7 +7,12 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-        return <p className='text-5xl'>loading.......</p>
+        return <p className='text-5xl'>
+            <div className="badge badge-lg"></div>
+            <div className="badge badge-md"></div>
+            <div className="badge badge-sm"></div>
+            <div className="badge badge-xs"></div>
+        </p>
     }
 
     if (user) {

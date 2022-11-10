@@ -9,13 +9,13 @@ const MyReviews = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+        fetch(`https://assignment-eleven-server-ten.vercel.app/reviews?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [user?.email])
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://assignment-eleven-server-ten.vercel.app/reviews/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -25,7 +25,14 @@ const MyReviews = () => {
 
                     const remaining = reviews.filter(review => review._id !== id);
                     setReviews(remaining);
-                    alert('deleted successfull');
+                    // alert('deleted successfull');
+                    <div className="toast toast-top toast-start">
+                        <div className="alert alert-success">
+                            <div>
+                                <span>Message sent successfully.</span>
+                            </div>
+                        </div>
+                    </div>
                 }
             })
 
